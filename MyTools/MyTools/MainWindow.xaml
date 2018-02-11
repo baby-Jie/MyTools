@@ -1,0 +1,24 @@
+﻿<Window x:Class="MyTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyTools"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid Background="Beige">
+
+        <StackPanel Margin="50,10,50,10" Orientation="Vertical">
+            <Button Content="UDP Server" Margin="20,10,20,10" Name="btnUdpServer" Click="btnUdpServer_Click"></Button>
+            <Button Content="Defending Process" Margin="20,10,20,10" Name="btnProcessDefending" Click="btnProcessDefending_Click"></Button>
+            <Button Content="Http Tool" Margin="20,10,20,10" Name="btnHttpTool" Click="btnHttpTool_Click"></Button>
+            <Button Content="Encrypt" Margin="20,10,20,10" Name="btnEncrypt" Click="btnEncrypt_Click" ></Button>
+            <Button Content="Process" Margin="20,10,20,10" Name="btnTestProcess" Click="btnTestProcess_Click"></Button>
+            <Button Content="Audio、Video" Margin="20,10,20,10" Name="btnTestDevices" Click="btnTestDevices_Click"></Button>
+            
+        </StackPanel>
+    </Grid>
+</Window>

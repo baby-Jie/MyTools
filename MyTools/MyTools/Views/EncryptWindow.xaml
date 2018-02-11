@@ -1,0 +1,54 @@
+﻿<Window x:Class="MyTools.EncryptWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyTools"
+        mc:Ignorable="d"
+        Title="EncryptWindow" Height="600" Width="600">
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="原文:" Margin="10,5" VerticalAlignment="Center"></TextBlock>
+            <TextBox TextWrapping="Wrap" Grid.Column="1" Margin="5" Height="50" Name="txtBxEncryptText" VerticalScrollBarVisibility="Auto"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="密文:" Margin="10,5" Grid.Row="1" VerticalAlignment="Center"></TextBlock>
+            <TextBox TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" Margin="5" Height="50" Name="txtBxDecryptText" VerticalScrollBarVisibility="Auto"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="MD5加密字符串" Width="100"  Height="40" HorizontalAlignment="Right" Margin="0,2,30,2" Name="btnMD5EncryptString" Click="btnMD5EncryptString_Click"></Button>
+            <Button Content="MD5加密文件"  Width="100"  Height="40" Grid.Column="1" HorizontalAlignment="Left" Margin="30,2,0,2" Name="btnMD5EncryptFile" Click="btnMD5EncryptFile_Click"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="DES加密字符串" Width="100"  Height="40" HorizontalAlignment="Right" Margin="0,2,30,2" Name="btnDesEncryptString" Click="btnDesEncryptString_Click"></Button>
+            <Button Content="DES解密字符串"  Width="100"  Height="40" Grid.Column="1" HorizontalAlignment="Left" Margin="30,2,0,2" Name="btnDESDecryptFile" Click="btnDESDecryptFile_Click"/>
+        </Grid>
+       
+    </Grid>
+</Window>

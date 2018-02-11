@@ -1,0 +1,24 @@
+﻿<Window x:Class="MyTools.UdpServerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyTools"
+        xmlns:tool="clr-namespace:ToolCollection.Validations;assembly=ToolCollection"
+        mc:Ignorable="d"
+        Title="UdpServerWindow" Height="300" Width="300">
+    <Window.Resources>
+        <tool:DigitalIntValidationRule x:Key="digitalValidationRule"></tool:DigitalIntValidationRule>
+    </Window.Resources>
+    <Grid Background="Bisque">
+        <GroupBox x:Name="UdpServerGroup" Header="UdpServer" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="247" Height="249"/>
+        <Button x:Name="btnShowLocalIp" Content="Show Local Ip" HorizontalAlignment="Left" Margin="71,165,0,0" VerticalAlignment="Top" Width="116" Click="btnShowLocalIp_Click"/>
+        <TextBox x:Name="txtBoxUdpPort" HorizontalAlignment="Left" Height="23" Margin="71,137,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120">
+           
+        </TextBox>
+        <Button x:Name="btnUdpOpen" Content="OpenUdp" HorizontalAlignment="Left" Margin="71,189,0,0" VerticalAlignment="Top" Width="116" Click="btnUdpOpen_Click"/>
+        <Button x:Name="btnUdpClose" Content="CloseUdp" HorizontalAlignment="Left" Margin="71,213,0,0" VerticalAlignment="Top" Width="116" Click="btnUdpClose_Click"/>
+        <TextBox x:Name="txtRecvFromUdp" HorizontalAlignment="Left" Height="109" Margin="71,23,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132"/>
+
+    </Grid>
+</Window>
