@@ -91,6 +91,7 @@ namespace ToolCollection
                 HttpWebRequest webRequest = (HttpWebRequest)HttpWebRequest.Create(url);
                 webRequest.Method = "GET";
                 webRequest.Timeout = timeout;
+                webRequest.Accept = "*/*; q=1";
                 //加Baisc认证
                 webRequest.Headers.Add("Authorization", GetBasicAuthorization(name, pass));
                 using (WebResponse webResponse = webRequest.GetResponse())

@@ -30,7 +30,7 @@ namespace MyTools
         {
           
             HttpInfo httpInfo = GetHttpInfo();
-            GetHttpMessage(httpInfo);
+            GetHttpMessage(httpInfo); 
         }
 
         private HttpInfo GetHttpInfo()
